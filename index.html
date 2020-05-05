@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Login</title>
 </head>
 <body>
-    <h3>Are you an existing user?</h3>
-    <form action="http://localhost:3000/users" method="GET">
-        <label>Enter username:</label>
-        <input name="user_name"/>
-        <input type="submit"/>
+
+    <form id = "login-form">
+        <input type= "text" name= "username" id= "username-field" class= "login-form-field" placeholder= "Username">
+        <input type= "password" name= "password" id="password-field" class= "login-form-field" placeholder= "Password">
+        <input type= "submit" value= "Login" id= "login-form-submit">
     </form>
     
-    <script src ="app.js"></script>
+    <script src ="login.js"></script>
 </body>
 </html>
