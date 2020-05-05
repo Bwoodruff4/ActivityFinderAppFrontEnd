@@ -6,18 +6,40 @@ fetch(`http://localhost:3000/users/${id}`)
     .then(user => {
     let h1 = document.createElement('h1')
     let h2 = document.createElement('h2')
-
-    h1.innerText = `Username: ${user.user_name}`
-    h2.innerText = `Zip Code: ${user.zip_code}`
-    document.body.append(h1,h2)
-    })
-
-fetch(`http://localhost:3000/activities/`)
+    let h3 = document.createElement('h3')
+    
+    fetch(`http://localhost:3000/activities/`)
     .then(response => response.json())
-    .then(activity => handleResponse(activity))
+    .then(activities => {
+        
+        h1.innerText = `Username: ${user.user_name}`
+        h2.innerText = `Zip Code: ${user.zip_code}`
+        document.body.append(h1,h2)
 
-    function handleResponse(activity){
-        let h3 = document.createElement('h1')
-        h3.innerText = activity.name
-        document.body.append(h3)
-    }
+        getActivityNameFromWeather(user.zip_code)
+
+        function getActivityNameFromWeather(zip_code){
+            let apikey = "843d9bfba1ebeb5f003112d73ff5072c"
+            let baseurl = "api.openweathermap.org/data/2.5/"
+                   
+            url = `http://${baseurl}weather?zip=${zip_code},us&units=imperial&appid=${apikey}`
+            fetch(url).then(response => response.json()).then(data => {
+                const activity = getActivity(data)
+                h3.innerText = activity.name
+                document.body.append(h3)
+            })
+        }
+        
+        function getActivity(weather_data){
+            weather_type = weather_data["weather"][0]["main"]
+        
+            filtered_list = activities.filter(activity => activity.weather_type === weather_type)
+        
+            random_activity = filtered_list[Math.floor(Math.random()*filtered_list.length)]
+
+            return random_activity
+        }
+    })
+})
+    
+
