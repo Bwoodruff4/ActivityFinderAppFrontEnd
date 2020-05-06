@@ -17,7 +17,7 @@ loginButton.addEventListener("click", (e) => {
     }
     
     function checkUser(user){
-        if (username === user.user_name && password === "p") {
+        if (username === user.user_name && password === user.password) {
             alert("You have successfully logged in.");
             window.location.href = `user.html?id=${user.id}`
         }

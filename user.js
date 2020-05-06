@@ -11,34 +11,42 @@ fetch(`http://localhost:3000/users/${id}`)
     fetch(`http://localhost:3000/activities/`)
     .then(response => response.json())
     .then(activities => {
-        
-        h1.innerText = `Username: ${user.user_name}`
-        h2.innerText = `Zip Code: ${user.zip_code}`
-        document.body.append(h1,h2)
 
-        getActivityNameFromWeather(user.zip_code)
+        fetch(`http://localhost:3000/api_keys/1`)
+        .then(response => response.json())
+        .then(key => {
 
-        function getActivityNameFromWeather(zip_code){
-            let apikey = "843d9bfba1ebeb5f003112d73ff5072c"
-            let baseurl = "api.openweathermap.org/data/2.5/"
+            let apikey = key.key
+
+            h1.innerText = `Username: ${user.user_name}`
+            h2.innerText = `Zip Code: ${user.zip_code}`
+            document.body.append(h1,h2)
+
+            getActivityNameFromWeather(user.zip_code)
+
+            function getActivityNameFromWeather(zip_code){
+
+                let baseurl = "api.openweathermap.org/data/2.5/"
+                console.log(apikey)
                    
-            url = `http://${baseurl}weather?zip=${zip_code},us&units=imperial&appid=${apikey}`
-            fetch(url).then(response => response.json()).then(data => {
-                const activity = getActivity(data)
-                h3.innerText = activity.name
-                document.body.append(h3)
-            })
-        }
+                url = `http://${baseurl}weather?zip=${zip_code},us&units=imperial&appid=${apikey}`
+                fetch(url).then(response => response.json()).then(data => {
+                    const activity = getActivity(data)
+                    h3.innerText = activity.name
+                    document.body.append(h3)
+                })
+            }
         
-        function getActivity(weather_data){
-            weather_type = weather_data["weather"][0]["main"]
+            function getActivity(weather_data){
+             weather_type = weather_data["weather"][0]["main"]
         
-            filtered_list = activities.filter(activity => activity.weather_type === weather_type)
+                filtered_list = activities.filter(activity => activity.weather_type === weather_type)
         
-            random_activity = filtered_list[Math.floor(Math.random()*filtered_list.length)]
+                random_activity = filtered_list[Math.floor(Math.random()*filtered_list.length)]
 
-            return random_activity
-        }
+                return random_activity
+            }
+        })
     })
 })
     
