@@ -8,32 +8,33 @@
 </head>
 <body>
 
-    <form id = "login-form">
-        <input type= "text" name= "username" id= "username-field" class= "login-form-field" placeholder= "Username">
-        <input type= "password" name= "password" id="password-field" class= "login-form-field" placeholder= "Password">
-        <input type= "submit" value= "Login" id= "login-form-submit">
-    </form>
-
-    <button class="open-button" onclick="openForm()">Create New User</button>
-
-    <div class="form-popup" id="create-user-form">
-        <form action="http://localhost:3000/users" class="form-container" method="POST" id="user-form">
-          <h2>Input User Information</h2>
-      
-          <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="user_name" required>
-      
-          <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required>
-
-          <label for="zipcode"><b>Zip Code</b></label>
-          <input type="text" placeholder="Zip Code" name="zip_code" pattern="[0-9]{5}" minlength="5" maxlength="5" required>
-      
-          <button type="submit" class="btn">Submit</button>
-          <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    <div class="login-box">
+        <form id = "login-form" class="login-form">
+            <input type= "text" name= "username" id= "username-field" class= "login-form-field" placeholder= "Username">
+            <input type= "password" name= "password" id="password-field" class= "login-form-field" placeholder= "Password">
+            <input type= "submit" value= "Login" id= "login-form-submit">
         </form>
-      </div>
-    
+        <button class="open-button" onclick="openForm()">Create New User</button>
+        
+        <div class="form-popup" id="create-user-form">
+            <form action="http://localhost:3000/users" class="form-container" method="POST" id="user-form">
+                <h2>Input User Information</h2>
+                
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="user_name" required>
+                
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                
+                <label for="zipcode"><b>Zip Code</b></label>
+                <input type="text" placeholder="Zip Code" name="zip_code" pattern="[0-9]{5}" minlength="5" maxlength="5" required>
+                
+                <button type="submit" class="btn">Submit</button>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </div>
+        
     <script src="login.js"></script>
     <script src="popupform.js"></script>
 </body>

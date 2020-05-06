@@ -27,7 +27,6 @@ fetch(`http://localhost:3000/users/${id}`)
             function getActivityNameFromWeather(zip_code){
 
                 let baseurl = "api.openweathermap.org/data/2.5/"
-                console.log(apikey)
                    
                 url = `http://${baseurl}weather?zip=${zip_code},us&units=imperial&appid=${apikey}`
                 fetch(url).then(response => response.json()).then(data => {
@@ -38,7 +37,7 @@ fetch(`http://localhost:3000/users/${id}`)
             }
         
             function getActivity(weather_data){
-             weather_type = weather_data["weather"][0]["main"]
+                weather_type = weather_data["weather"][0]["main"]
         
                 filtered_list = activities.filter(activity => activity.weather_type === weather_type)
         
