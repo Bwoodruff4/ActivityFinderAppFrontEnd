@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     display: flex;
     height: 80vh;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 .login-box {

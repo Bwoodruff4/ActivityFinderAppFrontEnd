@@ -31,8 +31,10 @@ fetch(`http://localhost:3000/users/${id}`)
                 url = `http://${baseurl}weather?zip=${zip_code},us&units=imperial&appid=${apikey}`
                 fetch(url).then(response => response.json()).then(data => {
                     const activity = getActivity(data)
+                    
                     h3.innerText = activity.name
                     document.body.append(h3)
+
                 })
             }
         
@@ -42,6 +44,9 @@ fetch(`http://localhost:3000/users/${id}`)
                 filtered_list = activities.filter(activity => activity.weather_type === weather_type)
         
                 random_activity = filtered_list[Math.floor(Math.random()*filtered_list.length)]
+
+                backgroundimage = `url(${random_activity.picture})`
+                document.body.style.backgroundImage = backgroundimage;
 
                 return random_activity
             }
