@@ -5,15 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="user.js"></script>
+    <script defer src="popupform.js"></script>
     <link rel="stylesheet" href="userstyles.css">
 </head>
 <body>
     <header>
         <ul>
-            <li><a class="active"a href="">Update Profile</a></li>
-            <li><a href="">Add Activity</a></li>
+            <li>
+                <button class="open-button" onclick="openFormProfile()">Update Profile</button>
+            </li>
+            <li>
+                <button class="open-button" onclick="openFormActivity()">Add Activity</button>
+            </li>
         </ul>
     </header>
+
+    <div class="form-popup" id="update-user-form">
+        <form action="http://localhost:3000/users" class="form-container" method="POST" id="edit-user-form">
+            <h3>Input User Information</h3>
+
+            <input type="hidden" name="_method" value="PUT">
+            <label for="password"><b>Update Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <label for="zipcode"><b>Update Zip Code</b></label>
+            <input type="text" placeholder="Zip Code" name="zip_code"pattern="[0-9]{5}" minlength="5" maxlength="5" required>
+
+            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn cancel" onclick="closeFormProfile()">Close</button>
+        </form>
+    </div>
+
+    <div class="form-popup" id="add-activity-form">
+        <form action="http://localhost:3000/activities" class="form-container" method="POST" id="new-activity-form">
+            <h3>Input Activity Information</h3>
+            
+            <label for="name"><b>Activity Name</b></label>
+            <input type="text" placeholder="Enter Activity Name" name="name"required>
+
+            <label for="description"><b>Description</b></label>
+            <input type="text" placeholder="Enter Description" name="description" required>
+
+            <label for="weather_type"><b>Weather Type</b></label>
+            <input type="text" placeholder="Enter Weather Type" name="weather_type" required>
+
+            <label for="picture"><b>Picture</b></label>
+            <input type="text" placeholder="Enter Picture URL" name="picture" required>
+            
+            <button type="submit" class="btn" onclick="closeFormActivity()">Submit</button>
+            <button type="submit" class="btn cancel" onclick="closeFormActivity()">Close</button>
+        </form>
+    </div>
     
 </body>
 </html>
