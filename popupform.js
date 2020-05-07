@@ -1,5 +1,5 @@
 function openForm() {
-    document.getElementById("create-user-form").style.display = "block";
+    document.getElementById("create-user-form").style.display = "flex";
 }
   
 function closeForm() {
