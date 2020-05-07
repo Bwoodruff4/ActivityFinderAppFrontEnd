@@ -23,7 +23,7 @@ fetch(`http://localhost:3000/users/${id}`)
             let apikey = key.key
 
             h1.innerText = `Hello, ${user.user_name}!`
-            document.body.append(h1)
+            document.getElementById("user-information").append(h1)
 
             getActivityNameFromWeather(user.zip_code)
 
@@ -37,7 +37,7 @@ fetch(`http://localhost:3000/users/${id}`)
                     
                     h4.innerText = `Recommended Activity: ${activity.name}`
                     h5.innerText = `Activity Description: ${activity.description}`
-                    document.body.append(h4,h5)
+                    document.getElementById("user-information").append(h4,h5)
 
                 })
             }
@@ -52,7 +52,7 @@ fetch(`http://localhost:3000/users/${id}`)
                 h2.innerText = `Current Temperature: ${Math.round(weather_temp)}°F`
                 h3.innerText = `Weather: ${weather_description}`
 
-                document.body.append(h2,h3)
+                document.getElementById("user-information").append(h2,h3)
         
                 filtered_list = activities.filter(activity => activity.weather_type === weather_type)
         
