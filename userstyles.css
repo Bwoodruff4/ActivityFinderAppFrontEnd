@@ -7,8 +7,8 @@ body {
     text-align: center;
     display: flex;
     height: 80vh;
-    font-family: Arial, Helvetica, sans-serif; 
     color: white;
+    font-family: 'Play', sans-serif;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -18,7 +18,6 @@ ul {
     text-align: center;
     justify-content:space-between;
     list-style: none;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
   
 li {
@@ -52,7 +51,7 @@ li a:hover {
 
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
+    display: none;
 }
 
 /* Add styles to the form container */
@@ -60,6 +59,8 @@ li a:hover {
     max-width: 230px;
     padding: 10px;
     background-color: white;
+    color: black;
+    text-shadow: none;
 }
 
 /* Full-width input fields */
@@ -95,4 +96,11 @@ li a:hover {
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+#user-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }

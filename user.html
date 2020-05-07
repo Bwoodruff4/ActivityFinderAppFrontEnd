@@ -7,6 +7,7 @@
     <script defer src="user.js"></script>
     <script defer src="popupform.js"></script>
     <link rel="stylesheet" href="userstyles.css">
+    
 </head>
 <body>
     <header>
@@ -18,7 +19,10 @@
                 <button class="open-button" onclick="openFormActivity()">Add Activity</button>
             </li>
         </ul>
+        
     </header>
+
+    <div id='user-information'></div>
 
     <div class="form-popup" id="update-user-form">
         <form action="http://localhost:3000/users" class="form-container" method="POST" id="edit-user-form">
