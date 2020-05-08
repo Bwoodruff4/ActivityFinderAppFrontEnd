@@ -59,18 +59,11 @@ Run the program by:
     
 ## Features
 
-* User login 
+* User login
+* Update user information
 * New user creation
 * New activity creation
 * Activity suggestion based on current weather
-* 
-
-Future features to be added:
-
-* 
-* 
-* 
-* 
 
 ## Status
 
