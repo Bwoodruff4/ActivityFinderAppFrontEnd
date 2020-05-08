@@ -71,7 +71,7 @@ Project is: completed with option to add future functionality.
 
 ## Contact
 
-Created by [Blake Woodruff](www.linkedin.com/in/blakewoodruffengineer)
+Created by [Blake Woodruff](http://www.linkedin.com/in/blakewoodruffengineer)
 [Chris Banta](http://www.linkedin.com/in/chris-banta)
 [Jeremy Hart](http://www.linkedin.com/in/**********)
 
