@@ -71,9 +71,4 @@ Project is: completed with option to add future functionality.
 
 Created by [Blake Woodruff](http://www.linkedin.com/in/blakewoodruffengineer)
 [Chris Banta](http://www.linkedin.com/in/chris-banta)
-[Jeremy Hart](http://www.linkedin.com/in/**********)
-
-## License
-
-[Click to view](https://github.com/stein0209/TheActivityFinder/blob/master/License.txt)
-
+[Jeremy Hart](http://www.linkedin.com/in/jeremy-hart-7b84901a2)
