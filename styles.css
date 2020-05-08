@@ -40,7 +40,6 @@ body {
 
 #create-user-form {
     align-items: center;
-    display: flex;
     justify-content: space-around;
 }
 

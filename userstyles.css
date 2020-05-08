@@ -2,7 +2,7 @@ body {
     background-image: none;
     background-color: #cccccc;
     background-size: cover;
-    justify-content: top;
+    /* justify-content: top; */
     /* flex-direction: column;
     text-align: center;
     display: flex; */
