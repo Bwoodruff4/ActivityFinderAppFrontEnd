@@ -1,3 +1,4 @@
+
 /* Button used to open the contact form - fixed at the bottom of the page */
 body {
     background-image: url("https://images.unsplash.com/photo-1516382799247-87df95d790b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80");
@@ -14,7 +15,7 @@ body {
     flex-direction: column;
     justify-content:space-between;
     align-items:center;
-    height:8vh;
+    height:4vh;
 }
 .open-button {
   background-color: #555;
@@ -26,10 +27,21 @@ body {
   width: 130px;
 }
 
+#create-user-button {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
-  border: 3px solid #f1f1f1;
+}
+
+#create-user-form {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Add styles to the form container */
@@ -78,4 +90,14 @@ h1{
     text-align: center;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#username-field {
+    padding:1px;
+    border-radius:5px;
+}
+
+#password-field {
+    padding:1px;
+    border-radius:5px;
 }
