@@ -13,6 +13,8 @@
 
 The Activity Finder is a full-stack app which takes a user’s location and randomly suggests an activity for the user to do based on current real-time weather information. All U.S. zip codes are supported. Users are able to edit their preferred location and add weather-specific activities to the database.
 
+![Demonstration Video](https://github.com/Bwoodruff4/ActivityFinderAppFrontEnd/blob/master/zoom_1.mp4)
+
 ## Technologies
 
 * HTML 5.0
