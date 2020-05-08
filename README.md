@@ -4,7 +4,6 @@
 * [General Info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Code Examples](#code-examples)
 * [Features](#features)
 * [Status](#status)
 * [Contact](#contact)
@@ -54,9 +53,6 @@ Run the program by:
 `lite-server to serve the web app and open it in a browser`
 
 By default, rails back end runs on localhost:3000 and front end runs on localhost:3001
-
-
-## Code Examples
 
     
 ## Features
