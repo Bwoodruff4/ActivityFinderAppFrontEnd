@@ -30,6 +30,9 @@ The Activity Finder is a full-stack app which takes a user’s location and rand
 #### Open Weather
 https://openweathermap.org/api
 
+#### Activity Finder Back End
+https://github.com/Bwoodruff4/ActivityFinderApp
+
 
 ## Setup
 
