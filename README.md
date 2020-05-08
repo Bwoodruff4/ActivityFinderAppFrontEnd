@@ -53,6 +53,8 @@ Run the program by:
 `rails s to start rails server`
 `lite-server to serve the web app and open it in a browser`
 
+By default, rails back end runs on localhost:3000 and front end runs on localhost:3001
+
 
 ## Code Examples
 
