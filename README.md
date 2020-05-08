@@ -16,14 +16,19 @@ The Activity Finder is a full-stack app which takes a user’s location and rand
 
 ## Technologies
 
-HTML 5.0
-CSS 3.0
-Ruby - Version 2.6.1
-Rails 6.0
-ActiveRecord - Version 6.0 
-Sinatra - Version 2.0
-Sinatra-activerecord -  Version 2.0
-SQLite3 - Version 1.4
+* HTML 5.0
+* CSS 3.0
+* Ruby - Version 2.6.1
+* Rails 6.0
+* ActiveRecord - Version 6.0 
+* Sinatra - Version 2.0
+* Sinatra-activerecord -  Version 2.0
+* SQLite3 - Version 1.4
+
+### API
+
+#### Open Weather
+https://openweathermap.org/api
 
 
 ## Setup
@@ -70,7 +75,7 @@ Project is: completed with option to add future functionality.
 
 ## Contact
 
-Created by [Blake Woodruff](www.linkedin.com/in/**********)
+Created by [Blake Woodruff](www.linkedin.com/in/blakewoodruffengineer)
 [Chris Banta](http://www.linkedin.com/in/chris-banta)
 [Jeremy Hart](http://www.linkedin.com/in/**********)
 
